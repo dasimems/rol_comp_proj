@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-size: 16px;
+  font-family: poppins;
+  background: whitesmoke;
+}
+
+body #body-content {
+  padding: 60px 5vw 20px 5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body #body-content .record-container {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+}
+
+body #body-content .record-container table {
+  font-size: 0.8rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+body #body-content .record-container table th,
+body #body-content .record-container table td {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+body #body-content .record-container table th {
+  background: #dbd9d9;
+  color: black;
+}
+
+body #body-content .record-container table tr:not(:nth-child(even)) {
+  background: #f8f8f6;
+}
+
+body #body-content .record-container table tr:nth-child(even) {
+  background: #fffbfb;
+}
+
+body #body-content .record-container .page-button {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+body #body-content .record-container .page-button ul {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #body-content .record-container .page-button ul li {
+  background: #292929;
+  border-radius: 5px;
+}
+
+body #body-content .record-container .page-button ul li a {
+  display: inline-block;
+  padding: 3px 14px;
+  color: white;
+  text-decoration: none;
+}
+
+body #body-content .record-container .page-button ul li:not(:first-child) {
+  margin-left: 10px;
+}
+
+body #body-content .record-container .page-button ul li:hover {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  -webkit-transform: scale(0.85, 0.85);
+          transform: scale(0.85, 0.85);
+}
+
+body #body-content .record-container .page-button ul #active-btn {
+  background: #8f8d8d;
+}
+
+body #body-content .record-container .page-button ul #active-btn a {
+  cursor: default;
+}
+
+body #body-content .record-container .page-button ul #active-btn:hover {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+body #body-content .record-container .page-button ul #dot-list {
+  background: transparent;
+  color: black;
+  font-size: 1.2rem;
+  color: #010122;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body #body-content .record-container .page-button ul #dot-list:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+/*# sourceMappingURL=index.css.map */

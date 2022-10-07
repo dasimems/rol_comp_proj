@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#main-body {
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins;
+  background: whitesmoke;
+  background: url(../images/login_backgrounds/background_one.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#main-body .login-body {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-body .login-body .login-content {
+  width: 20%;
+  min-width: 350px;
+  max-width: 400px;
+  height: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.6);
+          box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.6);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#main-body .login-body .login-content .login-header {
+  width: 100%;
+  text-transform: uppercase;
+  height: auto;
+  text-align: center;
+}
+
+#main-body .login-body .login-content .login-header h1 {
+  font-size: 1.3rem;
+}
+
+#main-body .login-body .login-content form {
+  width: 100%;
+}
+
+#main-body .login-body .login-content form .form-content {
+  width: 100%;
+  position: relative;
+}
+
+#main-body .login-body .login-content form .form-content input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #8f8c8c;
+}
+
+#main-body .login-body .login-content form .form-content #show-password-btn {
+  background: transparent;
+  color: black;
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+#main-body .login-body .login-content form .form-content #show-password-btn:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#main-body .login-body .login-content form .form-content input:hover {
+  border-bottom: 2px solid #777676;
+}
+
+#main-body .login-body .login-content form .form-content input:focus {
+  border-bottom: 2px solid #242323;
+}
+
+#main-body .login-body .login-content form .form-content button {
+  padding: 8px 25px;
+  background: black;
+  color: white;
+  font-family: poppinssemibold;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+#main-body .login-body .login-content form .form-content button:hover {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  background: white;
+  color: black;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+#main-body .login-body .login-content form .form-content:not(:first-child) {
+  margin-top: 20px;
+}
+
+#main-body .login-body .login-content form .form-content:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=login.css.map */

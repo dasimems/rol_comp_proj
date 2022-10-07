@@ -1,0 +1,1481 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-size: 16px;
+  font-family: poppins;
+  background: whitesmoke;
+}
+
+body #green-background {
+  background: #024902;
+  width: 30px;
+  height: 10px;
+}
+
+body #yellow-background {
+  background: #faa302;
+  width: 30px;
+  height: 10px;
+}
+
+body #red-background {
+  background: #6b0303;
+  width: 30px;
+  height: 10px;
+}
+
+body #blue-background {
+  background: #030363;
+  width: 30px;
+  height: 10px;
+}
+
+body input:not(:disabled):hover,
+body select:hover {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+body input:focus,
+body select:focus {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+  border: 1px solid #979696;
+}
+
+body button {
+  background: none;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body #default-button {
+  background: black;
+  color: white;
+}
+
+body #default-button a {
+  display: block;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+}
+
+body #default-button:hover {
+  color: black;
+  background: white;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+body #default-button:hover a {
+  color: black;
+}
+
+body #red-button {
+  background: red;
+  color: white;
+}
+
+body #red-button a {
+  display: block;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+}
+
+body #red-button:hover {
+  color: red;
+  background: white;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+body #red-button:hover a {
+  color: red;
+}
+
+body #green-button {
+  background: green;
+  color: white;
+}
+
+body #green-button a {
+  display: block;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+}
+
+body #green-button:hover {
+  color: green;
+  background: white;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+body #green-button:hover a {
+  color: green;
+}
+
+body .modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+body .modal .modal-container {
+  width: 40%;
+  min-width: 500px;
+  max-height: 100vh;
+  padding: 20px;
+  height: auto;
+  background: white;
+  border-radius: 10px;
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body .modal .modal-container .share-content {
+  width: 90%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .modal .modal-container .share-content input {
+  width: 100%;
+  height: 100%;
+  padding: 0px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  outline: none;
+  border: 1px solid #cfcece;
+}
+
+body .modal .modal-container .share-content button {
+  width: 10%;
+  min-width: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  outline: none;
+  border: 1px solid #cfcece;
+  height: 100%;
+  cursor: pointer;
+}
+
+body .modal .modal-container .close-button {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+
+body .modal .modal-container .close-button button {
+  background: red;
+  border-radius: 10px;
+}
+
+body .modal .modal-container .close-button button a {
+  display: block;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+  font-family: poppinssemibold;
+}
+
+body .modal .modal-container .close-button button:hover {
+  background: white;
+  border: 1px solid #fd8989;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+body .modal .modal-container .close-button button:hover a {
+  color: red;
+  padding: 4px 10px;
+}
+
+body .modal .modal-container form .form-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .modal .modal-container form .form-content h1 {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+body .modal .modal-container form .form-content label {
+  font-family: poppinssemibold;
+}
+
+body .modal .modal-container form .form-content input,
+body .modal .modal-container form .form-content select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #b3b3b3;
+  border-radius: 20px;
+  overflow: hidden;
+  outline: none;
+  margin-top: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 10px;
+}
+
+body .modal .modal-container form .form-content input[type="file"]::-webkit-file-upload-button {
+  border: none;
+  background: transparent;
+  border-right: 1px solid #b3b3b3;
+  height: 100%;
+  width: 18%;
+  min-width: 90px;
+}
+
+body .modal .modal-container form .form-content input[type="file"]::file-selector-button {
+  border: none;
+  background: transparent;
+  border-right: 1px solid #b3b3b3;
+  height: 100%;
+  width: 18%;
+  min-width: 90px;
+}
+
+body .modal .modal-container form .form-content input[type="file"]::-ms-browse {
+  border: none;
+  background: transparent;
+  border-right: 1px solid #b3b3b3;
+  height: 100%;
+  width: 18%;
+  min-width: 90px;
+}
+
+body .modal .modal-container form .form-content button {
+  border-radius: 20px;
+}
+
+body .modal .modal-container form .form-content button[type="submit"] {
+  padding: 2px 10px;
+}
+
+body .modal .modal-container form .form-content button:not(:first-child) {
+  margin-left: 10px;
+}
+
+body .modal .modal-container form .form-content:not(:first-child) {
+  margin-top: 10px;
+}
+
+body .modal .modal-container form .form-content:last-child {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .modal .modal-container .admin-profile-content {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+body .modal .modal-container .admin-profile-content .profile-content-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+body .modal .modal-container .admin-profile-content .profile-content-details .profile-content-image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+body .modal .modal-container .admin-profile-content .profile-content-details .profile-content-image img {
+  max-width: 100%;
+}
+
+body .modal .modal-container .admin-profile-content .profile-content-details .profile-content-description {
+  width: calc(100% - 100px);
+  padding: 0px 0px 0px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .modal .modal-container .admin-profile-content .profile-content-details .profile-content-description .profile-description-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .modal .modal-container .admin-profile-content .profile-content-details .profile-content-description .profile-description-content .title {
+  font-family: poppinssemibold;
+  min-width: 150px;
+}
+
+body .modal .modal-container .admin-profile-content button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
+}
+
+body .modal .modal-container .admin-profile-content button a {
+  color: red;
+}
+
+body .modal .modal-container .admin-profile-content button a:hover {
+  color: #880202;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+body .modal .modal-container .record-delete-content p {
+  text-align: center;
+}
+
+body .modal .modal-container .record-delete-content .record-delete-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .modal .modal-container .record-delete-content .record-delete-button button:not(:first-child) {
+  margin-left: 10px;
+}
+
+body #main-body {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 60px;
+}
+
+body #main-body .side-bar {
+  width: 20%;
+  height: auto;
+  position: relative;
+  min-width: 250px;
+  max-width: 300px;
+  min-height: calc(100vh - 60px);
+  background: white;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+body #main-body .main-container {
+  width: 80%;
+  height: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+body #main-body .main-container .dashboard-contents {
+  width: 90%;
+  height: auto;
+  margin-right: 5vw;
+  z-index: 1;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-cards .dashboard-card-content {
+  padding: 15px;
+  min-width: 300px;
+  background: white;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-cards .dashboard-card-content p.title {
+  color: #727171;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-cards .dashboard-card-content .card-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-cards .dashboard-card-content .card-details .icon {
+  -webkit-transition: 3s ease all;
+  transition: 3s ease all;
+  display: inline;
+  height: 20px;
+  color: #3d3d3d;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  opacity: 0;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-cards .dashboard-card-content:hover .card-details .icon {
+  -webkit-transform: rotate(360deg) scale(1.3, 1.3);
+          transform: rotate(360deg) scale(1.3, 1.3);
+  color: black;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-charts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-charts .hourly-report-line-charts {
+  width: 65%;
+  min-width: 500px;
+  min-height: 350px;
+  max-height: 400px;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-charts .hourly-report-line-charts .hourly-chart-text {
+  width: 100%;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-charts .hourly-report-line-charts .hourly-chart-text h1 {
+  font-size: 0.8rem;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-charts .hourly-report-line-charts #hourly-line-chart {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-charts .production-report-pie-chart {
+  width: 30%;
+  min-width: 250px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-charts .production-report-pie-chart .production-chart-text h1 {
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-charts .production-report-pie-chart .production-chart-text p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-charts .production-report-pie-chart .production-chart-text p span {
+  display: inline-block;
+}
+
+body #main-body .main-container .dashboard-contents .dashboard-charts .production-report-pie-chart .production-pie-chart {
+  width: 100%;
+  margin-top: 20px;
+}
+
+body #main-body .main-container .dashboard-contents .reports {
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+  background: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px 20px 20px 20px;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 30px;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content {
+  width: 100%;
+  height: auto;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content h1 {
+  font-size: 1rem;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content .report-table {
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content .report-table table {
+  font-size: 0.8rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content .report-table table th,
+body #main-body .main-container .dashboard-contents .reports .report-content .report-table table td {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content .report-table table th {
+  background: #dbd9d9;
+  color: black;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content .report-table table tr:not(:nth-child(even)) {
+  background: #f8f8f6;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content .report-table table tr:nth-child(even) {
+  background: #fffbfb;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content .report-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 20px;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content .report-links button {
+  border: 1px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content .report-links button a {
+  display: block;
+  padding: 8px 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: black;
+  text-decoration: none;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content .report-links button:hover {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  background: black;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content .report-links button:hover a {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  color: white;
+}
+
+body #main-body .main-container .dashboard-contents .reports .report-content:not(:first-child) {
+  margin-top: 30px;
+}
+
+body #main-body .main-container .record-container {
+  width: 90%;
+  height: 200px;
+  margin-right: 5vw;
+}
+
+body #main-body .main-container .record-container .record-actions {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search {
+  min-width: 200px;
+  max-width: 400px;
+  width: 40%;
+  height: 40px;
+  border: 1px solid #777676;
+  border-radius: 20px;
+  background: white;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-filter {
+  width: 15%;
+  height: 100%;
+  border-right: 1px solid #ccc6c6;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-filter .search-filter-button {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-filter .search-filter-button button {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-filter .search-filter-button:hover button {
+  color: #727272;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-box {
+  width: 75%;
+  height: 100%;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 10px;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-box input:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-box input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-button {
+  width: 15%;
+  min-width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-left: 1px solid #ccc6c6;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-button button {
+  font-family: poppinssemibold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-button button:hover {
+  color: #727272;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-filter-links {
+  position: absolute;
+  width: 91%;
+  max-height: auto;
+  height: 0px;
+  left: 50%;
+  overflow: hidden;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  top: 42px;
+  background: #fffcfc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 9;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-filter-links h2 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 10px;
+  font-size: 0.8rem;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-filter-links ul {
+  list-style: none;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-filter-links ul li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  cursor: pointer;
+  padding: 3px 10px;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-filter-links ul li a {
+  color: #03036e;
+}
+
+body #main-body .main-container .record-container .record-actions .record-search form .search-filter-links ul li:hover {
+  background: #e7e2e2;
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons {
+  position: relative;
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons button {
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  background: black;
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons button a {
+  padding: 5px 15px;
+  display: block;
+  cursor: pointer;
+  color: white;
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons button:hover {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  background: white;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons button:hover a {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  color: #464545;
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons button:not(:first-child) {
+  margin-left: 10px;
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons .record-sort-by-items {
+  width: 250px;
+  height: 0px;
+  max-height: auto;
+  overflow: hidden;
+  position: absolute;
+  background: white;
+  right: 0;
+  top: 30px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 9;
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons .record-sort-by-items h2 {
+  font-size: 0.8rem;
+  padding: 0px 10px;
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons .record-sort-by-items ul {
+  list-style: none;
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons .record-sort-by-items ul li {
+  padding: 3px 10px;
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons .record-sort-by-items ul li a {
+  text-decoration: none;
+  color: #03036e;
+}
+
+body #main-body .main-container .record-container .record-actions .record-buttons .record-sort-by-items ul li:hover {
+  background: #e7e2e2;
+}
+
+body #main-body .main-container .record-container .records-content {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+  background: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px 20px 20px 20px;
+  border-radius: 10px;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-title {
+  width: 100%;
+  height: auto;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-title h1 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table {
+  font-size: 0.75rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th,
+body #main-body .main-container .record-container .records-content .records-content-table table td {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 5px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th a,
+body #main-body .main-container .record-container .records-content .records-content-table table td a {
+  color: black;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th a:hover,
+body #main-body .main-container .record-container .records-content .records-content-table table td a:hover {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  color: #727171;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th #delete-link,
+body #main-body .main-container .record-container .records-content .records-content-table table td #delete-link {
+  color: red;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th #view-link,
+body #main-body .main-container .record-container .records-content .records-content-table table td #view-link {
+  color: #030350;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th #order-button,
+body #main-body .main-container .record-container .records-content .records-content-table table td #order-button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: auto;
+  right: 0;
+  top: 0;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th #order-button a,
+body #main-body .main-container .record-container .records-content .records-content-table table td #order-button a {
+  color: #010138;
+  font-size: 0.9rem;
+  padding: 0px;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th #order-button a svg,
+body #main-body .main-container .record-container .records-content .records-content-table table td #order-button a svg {
+  padding: 0;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th #order-button a:hover,
+body #main-body .main-container .record-container .records-content .records-content-table table td #order-button a:hover {
+  color: #010135;
+  -webkit-transform: none;
+          transform: none;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th #edit-data-button,
+body #main-body .main-container .record-container .records-content .records-content-table table td #edit-data-button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  width: auto;
+  right: 5px;
+  top: 5px;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th #edit-data-button a,
+body #main-body .main-container .record-container .records-content .records-content-table table td #edit-data-button a {
+  color: #010138;
+  font-size: 0.5rem;
+  padding: 0px;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th #edit-data-button a svg,
+body #main-body .main-container .record-container .records-content .records-content-table table td #edit-data-button a svg {
+  padding: 0;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th #edit-data-button a:hover,
+body #main-body .main-container .record-container .records-content .records-content-table table td #edit-data-button a:hover {
+  color: #010135;
+  -webkit-transform: none;
+          transform: none;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th input,
+body #main-body .main-container .record-container .records-content .records-content-table table td input {
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th input:hover,
+body #main-body .main-container .record-container .records-content .records-content-table table td input:hover {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th input:focus,
+body #main-body .main-container .record-container .records-content .records-content-table table td input:focus {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th input:disabled,
+body #main-body .main-container .record-container .records-content .records-content-table table td input:disabled {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th {
+  background: #dbd9d9;
+  color: black;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table th:first-child {
+  min-width: 45px;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table tr:not(:nth-child(even)) {
+  background: #f8f8f6;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table tr:nth-child(even) {
+  background: #fffbfb;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table tr:hover {
+  background: #f5f5d1;
+  cursor: default;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table tr.add-row {
+  background: white;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table tr.add-row td:not(:last-child) {
+  border: 1px solid #bdbcbc;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table tr.add-row td:not(:last-child) input {
+  width: 100%;
+  max-width: 80px;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table tr.add-row td:not(:last-child) input:disabled {
+  background: transparent;
+  color: black;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table tr.add-row td:not(:last-child) input[type="number"]::-webkit-inner-spin-button,
+body #main-body .main-container .record-container .records-content .records-content-table table tr.add-row td:not(:last-child) input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table tr.add-row td:not(:last-child) input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table tr.add-row td button {
+  font-size: 1rem;
+  background: #020244;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table tr.add-row td button:hover {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  -webkit-transform: scale(0.89, 0.89);
+          transform: scale(0.89, 0.89);
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table td#allow-edit {
+  background: white;
+  border: 1px solid #bdbcbc;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+  background: none;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table input[type="date"]::-webkit-datetime-edit-text {
+  color: #010138;
+  padding: 0 0.3em;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table input[type="date"]::-webkit-datetime-edit-month-field {
+  color: black;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table input[type="date"]::-webkit-datetime-edit-day-field {
+  color: black;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table input[type="date"]::-webkit-datetime-edit-year-field {
+  color: black;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table input[type="date"]::-webkit-calendar-picker-indicator {
+  background: none;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table.hourly th,
+body #main-body .main-container .record-container .records-content .records-content-table table.hourly td {
+  max-width: 50px;
+}
+
+body #main-body .main-container .record-container .records-content .records-content-table table.hourly tr.add-row td:not(:last-child) input {
+  max-width: 50px;
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn button {
+  background: black;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn button a {
+  display: block;
+  padding: 5px 15px;
+  color: white;
+  text-decoration: none;
+  font-family: poppinssemibold;
+  font-size: 0.9rem;
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn button:hover {
+  background: white;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn button:hover a {
+  color: black;
+  font-family: poppinssemibold;
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn #active-page-num {
+  background: #777777;
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn #active-page-num a {
+  cursor: context-menu;
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn #active-page-num:hover {
+  background: #777777;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn #active-page-num:hover a {
+  color: white;
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn button:not(:first-child) {
+  margin-left: 10px;
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn #dot-list {
+  background: transparent;
+  color: black;
+  font-size: 1.2rem;
+  color: #010122;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body #main-body .main-container .record-container .records-content .record-next-prev-page-btn #dot-list:hover {
+  background: white;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: default;
+}
+
+body #main-body .main-container .profile-container {
+  width: 90%;
+  height: auto;
+  margin-right: 5vw;
+  z-index: 1;
+}
+
+body #main-body .main-container .profile-container .profile-content {
+  width: 100%;
+  padding: 20px;
+  background: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+body #main-body .main-container .profile-container .profile-content .profile-content-image {
+  width: 15%;
+  height: auto;
+  min-width: 150px;
+  max-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #main-body .main-container .profile-container .profile-content .profile-content-image .profile-image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+body #main-body .main-container .profile-container .profile-content .profile-content-image .profile-image img {
+  max-width: 100%;
+}
+
+body #main-body .main-container .profile-container .profile-content .profile-content-image .profile-image button {
+  position: absolute;
+  z-index: 9;
+  bottom: 0;
+  right: 0;
+  font-size: 1.1rem;
+  background: white;
+  border-radius: 0px;
+}
+
+body #main-body .main-container .profile-container .profile-content .profile-content-image .profile-image button a {
+  display: block;
+  color: #020247;
+  padding: 2px 5px;
+}
+
+body #main-body .main-container .profile-container .profile-content .profile-content-details {
+  width: 85%;
+}
+
+body #main-body .main-container .profile-container .profile-content .profile-content-details .profile-details-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #main-body .main-container .profile-container .profile-content .profile-content-details .profile-details-content #title {
+  width: 150px;
+  font-family: poppinssemibold;
+}
+
+body #main-body .main-container .profile-container .profile-content .profile-content-details .profile-details-content #value a {
+  text-decoration: none;
+  color: #020247;
+}
+
+body #main-body .main-container .profile-container .profile-content .profile-content-details .profile-details-content #value button a {
+  font-size: 1.3rem;
+}
+
+body #main-body .main-container .profile-container .profile-content .profile-content-details .profile-details-content #value button:not(:first-child) {
+  margin-left: 10px;
+}
+
+body #main-body .main-container .profile-container .profile-content #profile-content-edit-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+body #main-body .main-container .profile-container .profile-content #profile-content-edit-button a {
+  font-size: 1rem;
+  color: #020247;
+}
+
+body #main-body .main-container .settings-container {
+  width: 90%;
+  height: auto;
+  margin-right: 5vw;
+  z-index: 1;
+}
+
+body #main-body .main-container .settings-container .settings-content {
+  width: 100%;
+  padding: 20px;
+  background: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  position: relative;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-content-details-title {
+  width: 100%;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-content-details-title h1 {
+  font-size: 1rem;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content {
+  width: 98%;
+  position: relative;
+  margin-left: 2%;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content .settings-details-edit {
+  width: 100%;
+  margin-top: 10px;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content .settings-details-edit form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content .settings-details-edit form .form-content {
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content .settings-details-edit form .form-content label {
+  font-family: poppinssemibold;
+  width: 210px;
+  min-width: 210px;
+  color: #5e5e5e;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content .settings-details-edit form .form-content input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 10px;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content .settings-details-edit form .form-content input:disabled {
+  background: whitesmoke;
+  color: black;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content .settings-details-edit form .form-content button:not(:first-child) {
+  margin-left: 10px;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content .settings-details-edit form .form-content button[type="submit"] {
+  padding: 2px 10px;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content .settings-details-edit form #password-field input {
+  width: 25%;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content .settings-details-edit form #password-field input:not(:first-child) {
+  margin-left: 3%;
+}
+
+body #main-body .main-container .settings-container .settings-content .settings-content-details .settings-details-content .settings-details-edit form .form-content:last-child {
+  min-width: 100px;
+  max-width: 200px;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=index.css.map */
